@@ -21,8 +21,8 @@ import albums.pictures.ai.commons.extensions.launchMoreAppsFromUsIntent
 import albums.pictures.ai.commons.extensions.launchViewIntent
 import albums.pictures.ai.commons.helpers.*
 import albums.pictures.ai.commons.models.FAQItem
-import albums.pictures.ai.commons.samples.BuildConfig
-import albums.pictures.ai.commons.samples.R
+import albums.pictures.ai.commons.BuildConfig
+import albums.pictures.ai.commons.R
 import albums.pictures.ai.commons.samples.screens.MainScreen
 
 class MainActivity : ComponentActivity() {
@@ -113,7 +113,7 @@ class MainActivity : ComponentActivity() {
             faqItems.add(FAQItem(albums.pictures.ai.commons.R.string.faq_6_title_commons, albums.pictures.ai.commons.R.string.faq_6_text_commons))
         }
 
-        startAboutActivity(R.string.smtco_app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true)
+        startAboutActivity(albums.pictures.ai.commons.R.string.smtco_app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true)
     }
 
     private fun startAboutActivity(
@@ -134,11 +134,11 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun getAppLauncherName() = getString(R.string.smtco_app_name)
+    private fun getAppLauncherName() = getString(albums.pictures.ai.commons.R.string.smtco_app_name)
 
     private fun getAppIconIDs(): ArrayList<Int> {
         val ids = ArrayList<Int>()
-        ids.add(R.mipmap.commons_launcher)
+        ids.add(albums.pictures.ai.commons.R.mipmap.commons_launcher)
         return ids
     }
 }
